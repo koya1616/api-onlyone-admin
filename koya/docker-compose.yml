@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  koya:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/api
+    # command: tail -f /dev/null
+    ports:
+      - 7779:7779

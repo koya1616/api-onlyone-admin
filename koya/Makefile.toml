@@ -1,0 +1,19 @@
+[tasks.watch]
+run_task = [
+  { name = ["clippy", "test"] }
+]
+watch = true
+
+[tasks.watch.paths]
+paths = ["src/**/*"]
+
+[tasks.clippy]
+command = "cargo"
+args = ["clippy"]
+
+[tasks.test]
+command = "cargo"
+args = ["test"]
+
+# コンパイル: rustc -0 ファイル名
+# 実行: ./ファイル名
